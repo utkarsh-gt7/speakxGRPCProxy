@@ -21,5 +21,5 @@ app.use(grpcWeb(grpcServerAddress));
 
 
 app.listen(process.env.PORT, () => {
-  console.log('gRPC-Web Proxy is running on port 8080');
+  console.log('gRPC-Web Proxy is running on port '+process.env.PORT);
 });
