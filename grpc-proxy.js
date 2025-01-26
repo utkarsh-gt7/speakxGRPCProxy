@@ -21,6 +21,6 @@ app.use(cors({
 app.use(grpcWeb(grpcServerAddress)); // Pass the gRPC server address
 
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log('gRPC-Web Proxy is running on port 8080');
 });
