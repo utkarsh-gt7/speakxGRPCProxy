@@ -5,7 +5,7 @@ const grpcWeb = require('@grpc-web/middleware');
 const app = express();
 
 // Specify the gRPC server address
-const grpcServerAddress = 'http://localhost:50051'; // Update with your gRPC server address
+const grpcServerAddress = 'https://speakx-assignmentserver.onrender.com:10000'; // Update with your gRPC server address
 
 app.use((req, res, next) => {
     console.log(`Request received: ${req.method} ${req.url}`);
