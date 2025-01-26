@@ -4,8 +4,7 @@ const grpcWeb = require('@grpc-web/middleware');
 
 const app = express();
 
-// Specify the gRPC server address
-const grpcServerAddress = 'https://speak-x-assignment-server-rgm9.vercel.app/'; // Update with your gRPC server address
+const grpcServerAddress = 'https://speak-x-assignment-server-rgm9.vercel.app/';
 
 app.use((req, res, next) => {
     console.log(`Request received: ${req.method} ${req.url}`);
@@ -14,11 +13,11 @@ app.use((req, res, next) => {
 
 //app.use(cors({ exposedHeaders: ['grpc-status', 'grpc-message'] }));
 app.use(cors({
-    origin: '*', // Allow all origins for testing
+    origin: '*',
     exposedHeaders: ['grpc-status', 'grpc-message'],
   }));
   
-app.use(grpcWeb(grpcServerAddress)); // Pass the gRPC server address
+app.use(grpcWeb(grpcServerAddress));
 
 
 app.listen(process.env.PORT, () => {
